@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download Image</title>
-  <style>
-    .image-container {
-      text-align: center;
-    }
-  </style>
+  <title>Auto Download Image</title>
 </head>
 <body>
-  <h1>Download My Resume</h1>
-  
-  <div class="image-container">
-    <img src="styles/resume.jpg" alt="Download Image">
-  </div>
-  
-  <a href="styles/resume.jpg" download>
-    Download Image
-  </a>
+  <script>
+    window.onload = function() {
+      var link = document.createElement('a');
+      link.href = 'styles/resume.jpg';
+      link.download = 'resume.jpg';
+      link.click();
+    };
+  </script>
 </body>
 </html>
