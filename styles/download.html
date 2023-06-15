@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download MY Resume</title>
+  <title>Auto Download Image</title>
 </head>
 <body>
   <script>
     window.onload = function() {
       var link = document.createElement('a');
-      link.href = 'resume.jpg';
-      link.download = 'resume.jpg';
+      link.href = document.querySelector('img').src;
+      link.download = 'image.jpg';
       link.click();
     };
   </script>
+
+  <img src="styles/resume.jpg" alt="Image">
 </body>
 </html>
