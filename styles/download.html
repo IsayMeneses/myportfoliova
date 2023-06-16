@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download File</title>
+  <title>Auto Download File</title>
 </head>
 <body>
-  <a href="https://drive.google.com/file/d/135gIw4fP-XeE97-mTOGo89XyUvmHrpaK/view?usp=drive_link" download>Download My Resume</a>
+  <script type="text/javascript">
+    window.onload = function() {
+      var link = document.createElement('a');
+      link.href = "https://drive.google.com/file/d/135gIw4fP-XeE97-mTOGo89XyUvmHrpaK/view?usp=drive_link";
+      link.download = "resume.jpg"; // Optional: Set desired filename
+      link.click();
+    };
+  </script>
 </body>
 </html>
